@@ -10,4 +10,4 @@ Boceto de previsualización de vista de tienda.
 Boceto de previsualización de vista de configuración.
 <img width="972" height="614" alt="boceto_settings" src="https://github.com/user-attachments/assets/6c10040f-b92a-4de2-9e7f-f307605ced6f" />
 
-
+ChiciIbai mason
