@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://c6ymmmka4ngra"
-path="res://.godot/imported/IosevkaCharonMono-LightItalic.ttf-70ae839555ea3a26a85f7982c6482995.fontdata"
+path="res://.godot/imported/IosevkaCharonMono-LightItalic.ttf-1fb00cc022f809a6c79d84c782e4a298.fontdata"
 
 [deps]
 
-source_file="res://fonts/IosevkaCharonMono-LightItalic.ttf"
-dest_files=["res://.godot/imported/IosevkaCharonMono-LightItalic.ttf-70ae839555ea3a26a85f7982c6482995.fontdata"]
+source_file="res://fonts/IosevkaCharonMono/IosevkaCharonMono-LightItalic.ttf"
+dest_files=["res://.godot/imported/IosevkaCharonMono-LightItalic.ttf-1fb00cc022f809a6c79d84c782e4a298.fontdata"]
 
 [params]
 

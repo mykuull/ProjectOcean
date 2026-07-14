@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://drlx0t05ep5jr"
-path="res://.godot/imported/IosevkaCharonMono-Regular.ttf-bac9edb185eb06c8f76535737af52300.fontdata"
+uid="uid://7gco6ymf31y7"
+path="res://.godot/imported/IosevkaCharonMono-MediumItalic.ttf-6513d651f7804fa8795727b3dedf91b0.fontdata"
 
 [deps]
 
-source_file="res://fonts/IosevkaCharonMono-Regular.ttf"
-dest_files=["res://.godot/imported/IosevkaCharonMono-Regular.ttf-bac9edb185eb06c8f76535737af52300.fontdata"]
+source_file="res://fonts/IosevkaCharonMono/IosevkaCharonMono-MediumItalic.ttf"
+dest_files=["res://.godot/imported/IosevkaCharonMono-MediumItalic.ttf-6513d651f7804fa8795727b3dedf91b0.fontdata"]
 
 [params]
 

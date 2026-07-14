@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bsnxicgtkrfq1" path="res://scripts/control.gd" id="1_0fbet"]
 [ext_resource type="Texture2D" uid="uid://bx0c6qv1pfcwp" path="res://assets/placeholder_logo.jpg" id="2_62e2m"]
-[ext_resource type="FontFile" uid="uid://b7x3heef3pgsw" path="res://fonts/IosevkaCharonMono-Bold.ttf" id="3_ee4bf"]
-[ext_resource type="FontFile" uid="uid://c6ymmmka4ngra" path="res://fonts/IosevkaCharonMono-LightItalic.ttf" id="4_kbped"]
+[ext_resource type="FontFile" uid="uid://b7x3heef3pgsw" path="res://fonts/IosevkaCharonMono/IosevkaCharonMono-Bold.ttf" id="3_ee4bf"]
+[ext_resource type="FontFile" uid="uid://c6ymmmka4ngra" path="res://fonts/IosevkaCharonMono/IosevkaCharonMono-LightItalic.ttf" id="4_kbped"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_16xqe"]
 corner_radius_top_left = 15

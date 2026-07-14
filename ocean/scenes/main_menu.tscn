@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://be58wgr57ofdy"]
+
+[ext_resource type="FontFile" uid="uid://b7x3heef3pgsw" path="res://fonts/IosevkaCharonMono/IosevkaCharonMono-Bold.ttf" id="1_bqqt6"]
+[ext_resource type="FontFile" uid="uid://c6ymmmka4ngra" path="res://fonts/IosevkaCharonMono/IosevkaCharonMono-LightItalic.ttf" id="2_wu84c"]
+[ext_resource type="FontFile" uid="uid://drlx0t05ep5jr" path="res://fonts/IosevkaCharonMono/IosevkaCharonMono-Regular.ttf" id="3_8ln24"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vue75"]
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="Gradient" id="Gradient_l6cm7"]
+offsets = PackedFloat32Array(0, 0.29104477, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.105882354, 0.32156864, 0.44313726, 1, 0.50980395, 0.78431374, 0.8980392, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ekxnf"]
+gradient = SubResource("Gradient_l6cm7")
+fill_from = Vector2(0, 1)
+fill_to = Vector2(0, 0)
+metadata/_snap_enabled = true
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bqqt6"]
+texture = SubResource("GradientTexture2D_ekxnf")
+
+[node name="MainMenu" type="Control" unique_id=1672630001]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer2" type="PanelContainer" parent="." unique_id=1557733482]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vue75")
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer2" unique_id=1531584936]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bqqt6")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer2/PanelContainer" unique_id=1377950970]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="PanelContainer2/PanelContainer/VBoxContainer" unique_id=1459568542]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="title" type="RichTextLabel" parent="PanelContainer2/PanelContainer/VBoxContainer" unique_id=16204851]
+custom_minimum_size = Vector2(50, 70)
+clip_contents = false
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("1_bqqt6")
+theme_override_font_sizes/normal_font_size = 90
+bbcode_enabled = true
+text = "[wave amp=30.0 freq=7.0 connected=1]OCEAN[/wave]"
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="Control2" type="Control" parent="PanelContainer2/PanelContainer/VBoxContainer" unique_id=727258003]
+custom_minimum_size = Vector2(20, 45)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="slogan" type="RichTextLabel" parent="PanelContainer2/PanelContainer/VBoxContainer" unique_id=355240333]
+custom_minimum_size = Vector2(50, 30)
+clip_contents = false
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_wu84c")
+theme_override_font_sizes/normal_font_size = 26
+text = "Deepening your knowledge through hard work."
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer2/PanelContainer/VBoxContainer" unique_id=371852123]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer2/PanelContainer/VBoxContainer/HBoxContainer" unique_id=749578162]
+custom_minimum_size = Vector2(0, 200)
+custom_maximum_size = Vector2(300, -1)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 42
+alignment = 1
+
+[node name="Control" type="Control" parent="PanelContainer2/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=2087217072]
+layout_mode = 2
+
+[node name="Cronometer" type="Button" parent="PanelContainer2/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1042522859]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 40
+text = "Cronometer"
+
+[node name="Settings" type="Button" parent="PanelContainer2/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=844856848]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 40
+text = "Settings"
+
+[node name="Quit" type="Button" parent="PanelContainer2/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1508646757]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 40
+text = "Quit"

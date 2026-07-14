@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://b7x3heef3pgsw"
-path="res://.godot/imported/IosevkaCharonMono-Bold.ttf-70072cb44d5eb0be18e7945434c250f8.fontdata"
+path="res://.godot/imported/IosevkaCharonMono-Bold.ttf-f57ffdc1248b19286435c32748b3f94e.fontdata"
 
 [deps]
 
-source_file="res://fonts/IosevkaCharonMono-Bold.ttf"
-dest_files=["res://.godot/imported/IosevkaCharonMono-Bold.ttf-70072cb44d5eb0be18e7945434c250f8.fontdata"]
+source_file="res://fonts/IosevkaCharonMono/IosevkaCharonMono-Bold.ttf"
+dest_files=["res://.godot/imported/IosevkaCharonMono-Bold.ttf-f57ffdc1248b19286435c32748b3f94e.fontdata"]
 
 [params]
 
