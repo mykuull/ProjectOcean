@@ -7,3 +7,7 @@ Boceto de previsualización de vista de cronómetro.
 Boceto de previsualización de vista de tienda.
 <img width="865" height="592" alt="boceto_shop" src="https://github.com/user-attachments/assets/6670e755-b307-480c-85db-c4d8d374e9e0" />
 
+Boceto de previsualización de vista de configuración.
+<img width="972" height="614" alt="boceto_settings" src="https://github.com/user-attachments/assets/6c10040f-b92a-4de2-9e7f-f307605ced6f" />
+
+
