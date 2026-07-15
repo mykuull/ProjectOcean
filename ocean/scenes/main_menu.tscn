@@ -1,9 +1,7 @@
 [gd_scene format=3 uid="uid://be58wgr57ofdy"]
 
-[ext_resource type="FontFile" uid="uid://b7x3heef3pgsw" path="res://fonts/IosevkaCharonMono/IosevkaCharonMono-Bold.ttf" id="1_bqqt6"]
 [ext_resource type="Script" uid="uid://xhj70k6iosf2" path="res://scripts/main_menu.gd" id="1_wu84c"]
-[ext_resource type="FontFile" uid="uid://c6ymmmka4ngra" path="res://fonts/IosevkaCharonMono/IosevkaCharonMono-LightItalic.ttf" id="2_wu84c"]
-[ext_resource type="FontFile" uid="uid://drlx0t05ep5jr" path="res://fonts/IosevkaCharonMono/IosevkaCharonMono-Regular.ttf" id="3_8ln24"]
+[ext_resource type="FontFile" uid="uid://dgyxgol324dj2" path="res://fonts/Excalifont/Excalifont-Regular.ttf" id="2_ekxnf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vue75"]
 corner_radius_top_left = 15
@@ -23,6 +21,35 @@ metadata/_snap_enabled = true
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bqqt6"]
 texture = SubResource("GradientTexture2D_ekxnf")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bqqt6"]
+bg_color = Color(0.05882353, 0.18039216, 0.2509804, 0.78431374)
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wu84c"]
+bg_color = Color(0.05882353, 0.18039216, 0.2509804, 0.78431374)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ln24"]
+bg_color = Color(0.05882353, 0.18039216, 0.2509804, 0.78431374)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rtw2f"]
+bg_color = Color(0.05882353, 0.18039216, 0.2509804, 0.78431374)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [node name="MainMenu" type="Control" unique_id=1672630001]
 layout_mode = 3
@@ -57,10 +84,10 @@ size_flags_horizontal = 3
 [node name="title" type="RichTextLabel" parent="PanelContainer2/PanelContainer/VBoxContainer" unique_id=16204851]
 custom_minimum_size = Vector2(50, 100)
 layout_mode = 2
-theme_override_fonts/normal_font = ExtResource("1_bqqt6")
+theme_override_fonts/normal_font = ExtResource("2_ekxnf")
 theme_override_font_sizes/normal_font_size = 90
 bbcode_enabled = true
-text = "[wave amp=30.0 freq=7.0 connected=1]OCEAN[/wave]"
+text = "[wave amp=30.0 freq=2.0 connected=1]OCEAN[/wave]"
 scroll_active = false
 horizontal_alignment = 1
 
@@ -72,7 +99,7 @@ size_flags_horizontal = 3
 [node name="slogan" type="RichTextLabel" parent="PanelContainer2/PanelContainer/VBoxContainer" unique_id=355240333]
 custom_minimum_size = Vector2(50, 40)
 layout_mode = 2
-theme_override_fonts/normal_font = ExtResource("2_wu84c")
+theme_override_fonts/normal_font = ExtResource("2_ekxnf")
 theme_override_font_sizes/normal_font_size = 26
 text = "Deepening your knowledge through hard work."
 scroll_active = false
@@ -87,30 +114,56 @@ custom_minimum_size = Vector2(0, 200)
 custom_maximum_size = Vector2(300, -1)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_constants/separation = 40
+theme_override_constants/separation = 20
 alignment = 1
 
 [node name="Control" type="Control" parent="PanelContainer2/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=2087217072]
 layout_mode = 2
 
 [node name="Cronometer" type="Button" parent="PanelContainer2/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1042522859]
+custom_minimum_size = Vector2(200, 90)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_fonts/font = ExtResource("2_ekxnf")
 theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_bqqt6")
 text = "Cronometer"
 
 [node name="Settings" type="Button" parent="PanelContainer2/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=844856848]
+custom_minimum_size = Vector2(0, 90)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_fonts/font = ExtResource("2_ekxnf")
 theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_wu84c")
 text = "Settings"
 
 [node name="Quit" type="Button" parent="PanelContainer2/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1508646757]
+custom_minimum_size = Vector2(0, 90)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_fonts/font = ExtResource("2_ekxnf")
 theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_8ln24")
 text = "Quit"
+
+[node name="Credits" type="Button" parent="." unique_id=1136486996]
+custom_minimum_size = Vector2(200, 90)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -202.0
+offset_top = -148.0
+offset_right = -54.0
+offset_bottom = -68.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_ekxnf")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_rtw2f")
+text = "Credits"
 
 [connection signal="pressed" from="PanelContainer2/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/Cronometer" to="." method="_on_cronometer_pressed"]
 [connection signal="pressed" from="PanelContainer2/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="PanelContainer2/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
