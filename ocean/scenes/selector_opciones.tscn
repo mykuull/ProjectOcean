@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://cqax2y7u642ul"]
+
+[ext_resource type="Texture2D" uid="uid://dqbpy1yxnr3dj" path="res://assets/icons/contract.png" id="1_hbrd2"]
+[ext_resource type="FontFile" uid="uid://dgyxgol324dj2" path="res://fonts/Excalifont/Excalifont-Regular.ttf" id="2_na5ot"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_16xqe"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="HBoxContainer" type="HBoxContainer" unique_id=1092027332]
+custom_minimum_size = Vector2(45, 45)
+
+[node name="icon" type="TextureRect" parent="." unique_id=243352324]
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+texture = ExtResource("1_hbrd2")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Control2" type="Control" parent="." unique_id=1542148275]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="option" type="Label" parent="." unique_id=588654358]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_na5ot")
+theme_override_font_sizes/font_size = 25
+text = "Option"
+
+[node name="Control" type="Control" parent="." unique_id=1728026267]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="button_left" type="Button" parent="." unique_id=1136179628]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_na5ot")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_16xqe")
+text = "<"
+
+[node name="selecc" type="Label" parent="." unique_id=795068809]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_na5ot")
+theme_override_font_sizes/font_size = 25
+text = "Value"
+
+[node name="button_right" type="Button" parent="." unique_id=963496501]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_na5ot")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_16xqe")
+text = ">"

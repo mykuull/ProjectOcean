@@ -21,3 +21,7 @@ func _on_cronometer_pressed() -> void:
 
 func _on_settings_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/settings.tscn") # Change scenes to settings
+
+
+func _on_credits_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/credits.tscn") # Change scenes to credits
