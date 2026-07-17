@@ -3,8 +3,11 @@
 [ext_resource type="Texture2D" uid="uid://dqbpy1yxnr3dj" path="res://assets/icons/contract.png" id="1_hbrd2"]
 [ext_resource type="FontFile" uid="uid://dgyxgol324dj2" path="res://fonts/Excalifont/Excalifont-Regular.ttf" id="2_na5ot"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_16xqe"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hbrd2"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_16xqe"]
+bg_color = Color(0.6, 0.6, 0.6, 0.14117648)
 
 [node name="HBoxContainer" type="HBoxContainer" unique_id=1092027332]
 custom_minimum_size = Vector2(45, 45)
@@ -37,7 +40,12 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_na5ot")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_16xqe")
+theme_override_styles/normal = SubResource("StyleBoxFlat_hbrd2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_16xqe")
+theme_override_styles/hover = SubResource("StyleBoxFlat_16xqe")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_16xqe")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_16xqe")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_16xqe")
 text = "<"
 
 [node name="selecc" type="Label" parent="." unique_id=795068809]
@@ -52,5 +60,10 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_na5ot")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_16xqe")
+theme_override_styles/normal = SubResource("StyleBoxFlat_hbrd2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_16xqe")
+theme_override_styles/hover = SubResource("StyleBoxFlat_16xqe")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_16xqe")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_16xqe")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_16xqe")
 text = ">"

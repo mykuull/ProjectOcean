@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://xhj70k6iosf2" path="res://scripts/main_menu.gd" id="1_wu84c"]
 [ext_resource type="FontFile" uid="uid://dgyxgol324dj2" path="res://fonts/Excalifont/Excalifont-Regular.ttf" id="2_ekxnf"]
+[ext_resource type="PackedScene" uid="uid://ciikavpo8hp8b" path="res://scenes/menu_button.tscn" id="3_bqqt6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vue75"]
 corner_radius_top_left = 15
@@ -21,35 +22,6 @@ metadata/_snap_enabled = true
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bqqt6"]
 texture = SubResource("GradientTexture2D_ekxnf")
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bqqt6"]
-bg_color = Color(0.05882353, 0.18039216, 0.2509804, 0.78431374)
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wu84c"]
-bg_color = Color(0.05882353, 0.18039216, 0.2509804, 0.78431374)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ln24"]
-bg_color = Color(0.05882353, 0.18039216, 0.2509804, 0.78431374)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rtw2f"]
-bg_color = Color(0.05882353, 0.18039216, 0.2509804, 0.78431374)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
 
 [node name="MainMenu" type="Control" unique_id=1672630001]
 layout_mode = 3
@@ -120,50 +92,27 @@ alignment = 1
 [node name="Control" type="Control" parent="PanelContainer2/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=2087217072]
 layout_mode = 2
 
-[node name="Cronometer" type="Button" parent="PanelContainer2/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1042522859]
-custom_minimum_size = Vector2(200, 90)
+[node name="Chronometer" parent="PanelContainer2/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=400716776 instance=ExtResource("3_bqqt6")]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_ekxnf")
-theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxFlat_bqqt6")
-text = "Cronometer"
+text = "Chronometer"
 
-[node name="Settings" type="Button" parent="PanelContainer2/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=844856848]
-custom_minimum_size = Vector2(0, 90)
+[node name="Settings" parent="PanelContainer2/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=199488724 instance=ExtResource("3_bqqt6")]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_ekxnf")
-theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxFlat_wu84c")
 text = "Settings"
 
-[node name="Quit" type="Button" parent="PanelContainer2/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1508646757]
-custom_minimum_size = Vector2(0, 90)
+[node name="Quit" parent="PanelContainer2/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1027131589 instance=ExtResource("3_bqqt6")]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_ekxnf")
-theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxFlat_8ln24")
 text = "Quit"
 
-[node name="Credits" type="Button" parent="." unique_id=1136486996]
-custom_minimum_size = Vector2(200, 90)
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -202.0
-offset_top = -148.0
-offset_right = -54.0
-offset_bottom = -68.0
-grow_horizontal = 0
-grow_vertical = 0
-theme_override_fonts/font = ExtResource("2_ekxnf")
-theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxFlat_rtw2f")
+[node name="Credits" parent="." unique_id=1797716351 instance=ExtResource("3_bqqt6")]
+layout_mode = 0
+offset_left = 900.0
+offset_top = 504.0
+offset_right = 1100.0
+offset_bottom = 594.0
 text = "Credits"
 
-[connection signal="pressed" from="PanelContainer2/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/Cronometer" to="." method="_on_cronometer_pressed"]
+[connection signal="pressed" from="PanelContainer2/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/Chronometer" to="." method="_on_chronometer_pressed"]
 [connection signal="pressed" from="PanelContainer2/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="PanelContainer2/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
