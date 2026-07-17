@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://ciikavpo8hp8b"]
+
+[ext_resource type="FontFile" uid="uid://dgyxgol324dj2" path="res://fonts/Excalifont/Excalifont-Regular.ttf" id="1_sd4kj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wvina"]
+bg_color = Color(0.05882353, 0.18039216, 0.2509804, 0.8980392)
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t403i"]
+bg_color = Color(0.10880383, 0.27833888, 0.3755612, 0.8392157)
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oh07r"]
+bg_color = Color(0.10880383, 0.27833888, 0.3755612, 0.8392157)
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="MenuButton" type="Button" unique_id=400716776]
+custom_minimum_size = Vector2(200, 90)
+theme_override_fonts/font = ExtResource("1_sd4kj")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_wvina")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_t403i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_oh07r")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_oh07r")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_oh07r")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_oh07r")
+text = "Text"
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

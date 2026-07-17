@@ -28,8 +28,40 @@ metadata/_snap_enabled = true
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_am25x"]
 texture = SubResource("GradientTexture2D_gjs24")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gjs24"]
+bg_color = Color(0.6, 0.6, 0.6, 0.34901962)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 15.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_am25x"]
+bg_color = Color(0.6, 0.6, 0.6, 0.8)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 15.0
+expand_margin_bottom = 5.0
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_16xqe"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
+bg_color = Color(0.6, 0.6, 0.6, 0.34901962)
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
@@ -114,7 +146,12 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_6wm04")
 theme_override_font_sizes/font_size = 25
-theme_override_styles/normal = SubResource("StyleBoxFlat_16xqe")
+theme_override_styles/normal = SubResource("StyleBoxFlat_gjs24")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_am25x")
+theme_override_styles/hover = SubResource("StyleBoxFlat_16xqe")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_16xqe")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_16xqe")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_16xqe")
 text = "Back"
 icon = ExtResource("8_am25x")
 alignment = 2
