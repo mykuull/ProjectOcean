@@ -1,15 +1,17 @@
 extends HBoxContainer
 
-#podemos configurar las variables desde el inspector del panel derecho
+# podemos configurar las variables desde el inspector del panel derecho
 @export var titulo_opcion: String = "Opción"
 @export var lista_opciones: Array[String] = ["A","B","C"]
 @export var imagen_icono: Texture2D
 
 var indice_actual = 0
-#referencia a los nodos label, prepararlos antes de que exista la escena
+# referencia a los nodos label, prepararlos antes de que exista la escena
 @onready var etiqueta_titulo= $option
 @onready var etiqueta_valor = $selecc
 @onready var textura_icono = $icon
+@onready var sfx_press_left: AudioStreamPlayer = $button_left/SFXPressLeft
+@onready var sfx_press_right: AudioStreamPlayer = $button_right/SFXPressRight
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -24,19 +26,25 @@ func _process(delta: float) -> void:
 	pass
 	
 func _on_button_left_pressed() -> void:
-	if lista_opciones.size()==0:return
 	
-	#si se presiona el botón disminuye en uno el índice que selecciona el valor
+	sfx_press_left.play()
+	
+	if lista_opciones.size()==0: return
+	
+	# si se presiona el botón disminuye en uno el índice que selecciona el valor
 	indice_actual-=1
 	if indice_actual<0:
-		#si es menor que cero da la vuelta
+		# si es menor que cero da la vuelta
 		indice_actual = lista_opciones.size()-1
 	
-	#seleccion valor según índice
+	# seleccion valor según índice
 	etiqueta_valor.text = lista_opciones[indice_actual]
 	
 func _on_button_right_pressed()->void:
-	if lista_opciones.size()==0:return 
+	
+	sfx_press_right.play()
+	
+	if lista_opciones.size()==0: return 
 	
 	indice_actual+=1
 	if indice_actual>=lista_opciones.size():

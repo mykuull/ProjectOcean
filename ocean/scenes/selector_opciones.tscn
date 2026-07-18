@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://cqax2y7u642ul"]
 
+[ext_resource type="Script" uid="uid://b6aj1xulslotf" path="res://scripts/selector_opciones.gd" id="1_320a1"]
 [ext_resource type="Texture2D" uid="uid://dqbpy1yxnr3dj" path="res://assets/icons/contract.png" id="1_hbrd2"]
 [ext_resource type="FontFile" uid="uid://dgyxgol324dj2" path="res://fonts/Excalifont/Excalifont-Regular.ttf" id="2_na5ot"]
+[ext_resource type="AudioStream" uid="uid://bcub3ye8p5dfw" path="res://sounds/UI/water_drop_synthetic.wav" id="3_na5ot"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hbrd2"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -9,8 +11,9 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_16xqe"]
 bg_color = Color(0.6, 0.6, 0.6, 0.14117648)
 
-[node name="HBoxContainer" type="HBoxContainer" unique_id=1092027332]
+[node name="SelectorOpciones" type="HBoxContainer" unique_id=1092027332]
 custom_minimum_size = Vector2(45, 45)
+script = ExtResource("1_320a1")
 
 [node name="icon" type="TextureRect" parent="." unique_id=243352324]
 custom_minimum_size = Vector2(45, 45)
@@ -48,6 +51,10 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_16xqe")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_16xqe")
 text = "<"
 
+[node name="SFXPressLeft" type="AudioStreamPlayer" parent="button_left" unique_id=938378079]
+stream = ExtResource("3_na5ot")
+volume_db = -10.0
+
 [node name="selecc" type="Label" parent="." unique_id=795068809]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_na5ot")
@@ -67,3 +74,10 @@ theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_16xqe")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_16xqe")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_16xqe")
 text = ">"
+
+[node name="SFXPressRight" type="AudioStreamPlayer" parent="button_right" unique_id=381766611]
+stream = ExtResource("3_na5ot")
+volume_db = -10.0
+
+[connection signal="pressed" from="button_left" to="." method="_on_button_left_pressed"]
+[connection signal="pressed" from="button_right" to="." method="_on_button_right_pressed"]

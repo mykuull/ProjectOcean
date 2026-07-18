@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://ciikavpo8hp8b"]
 
 [ext_resource type="FontFile" uid="uid://dgyxgol324dj2" path="res://fonts/Excalifont/Excalifont-Regular.ttf" id="1_sd4kj"]
+[ext_resource type="Script" uid="uid://bmum0cs6dk2j" path="res://scripts/menu_button.gd" id="2_hunp8"]
+[ext_resource type="AudioStream" uid="uid://fjhb2qjliflp" path="res://sounds/UI/pop_1.wav" id="2_sd4kj"]
+[ext_resource type="AudioStream" uid="uid://bcub3ye8p5dfw" path="res://sounds/UI/water_drop_synthetic.wav" id="3_3wbiy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wvina"]
 bg_color = Color(0.05882353, 0.18039216, 0.2509804, 0.8980392)
@@ -39,5 +42,16 @@ theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_oh07r")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_oh07r")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_oh07r")
 text = "Text"
+script = ExtResource("2_hunp8")
 
+[node name="SFXHoverUnhover" type="AudioStreamPlayer" parent="." unique_id=867925644]
+stream = ExtResource("3_3wbiy")
+volume_db = -10.0
+max_polyphony = 2
+
+[node name="SFXPress" type="AudioStreamPlayer" parent="." unique_id=1024977872]
+stream = ExtResource("2_sd4kj")
+max_polyphony = 2
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cjsv4ronvevg1"
+path="res://.godot/imported/synth_bass_level_complete.wav-870ff74f003fc3e4cff0d968b6a05305.sample"
+
+[deps]
+
+source_file="res://sounds/Musical Effects/synth_bass_level_complete.wav"
+dest_files=["res://.godot/imported/synth_bass_level_complete.wav-870ff74f003fc3e4cff0d968b6a05305.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
