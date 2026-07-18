@@ -3,11 +3,11 @@
 [ext_resource type="FontFile" uid="uid://dgyxgol324dj2" path="res://fonts/Excalifont/Excalifont-Regular.ttf" id="1_6wm04"]
 [ext_resource type="Script" uid="uid://b7i5bl4euwlw7" path="res://scripts/settings.gd" id="1_gjs24"]
 [ext_resource type="PackedScene" uid="uid://cqax2y7u642ul" path="res://scenes/selector_opciones.tscn" id="2_f4mfi"]
-[ext_resource type="Script" uid="uid://b6aj1xulslotf" path="res://scripts/selector_opciones.gd" id="3_es4n0"]
 [ext_resource type="Texture2D" uid="uid://dr63iyy0c7egi" path="res://assets/icons/translation.png" id="4_gis3k"]
 [ext_resource type="Texture2D" uid="uid://bbtym1hv6yk3f" path="res://assets/icons/monitor.png" id="5_83j8s"]
 [ext_resource type="Texture2D" uid="uid://daderti7g4ela" path="res://assets/icons/headphone.png" id="6_gjs24"]
 [ext_resource type="Texture2D" uid="uid://dbua1smrefhjn" path="res://assets/icons/arrow.png" id="8_am25x"]
+[ext_resource type="AudioStream" uid="uid://bysjaehqmvili" path="res://sounds/UI/pop_2.wav" id="8_gjs24"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gis3k"]
 corner_radius_top_left = 15
@@ -120,22 +120,19 @@ theme_override_font_sizes/font_size = 60
 text = "Settings"
 horizontal_alignment = 1
 
-[node name="HBoxContainer" parent="VBoxContainer" unique_id=1092027332 instance=ExtResource("2_f4mfi")]
+[node name="Language" parent="VBoxContainer" unique_id=1092027332 instance=ExtResource("2_f4mfi")]
 layout_mode = 2
-script = ExtResource("3_es4n0")
 titulo_opcion = "Language"
 lista_opciones = Array[String](["Spanish", "English", "Chinese"])
 imagen_icono = ExtResource("4_gis3k")
 
-[node name="HBoxContainer2" parent="VBoxContainer" unique_id=670303661 instance=ExtResource("2_f4mfi")]
+[node name="Display" parent="VBoxContainer" unique_id=670303661 instance=ExtResource("2_f4mfi")]
 layout_mode = 2
-script = ExtResource("3_es4n0")
 titulo_opcion = "Display"
 imagen_icono = ExtResource("5_83j8s")
 
-[node name="HBoxContainer3" parent="VBoxContainer" unique_id=1304348315 instance=ExtResource("2_f4mfi")]
+[node name="Volume" parent="VBoxContainer" unique_id=1304348315 instance=ExtResource("2_f4mfi")]
 layout_mode = 2
-script = ExtResource("3_es4n0")
 titulo_opcion = "Volume"
 imagen_icono = ExtResource("6_gjs24")
 
@@ -156,5 +153,9 @@ text = "Back"
 icon = ExtResource("8_am25x")
 alignment = 2
 expand_icon = true
+
+[node name="SFXPressBack" type="AudioStreamPlayer" parent="VBoxContainer/back" unique_id=1701291181]
+stream = ExtResource("8_gjs24")
+max_polyphony = 2
 
 [connection signal="pressed" from="VBoxContainer/back" to="." method="_on_back_pressed"]

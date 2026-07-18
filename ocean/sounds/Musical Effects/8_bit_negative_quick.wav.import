@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dvrtjh1pfayie"
+path="res://.godot/imported/8_bit_negative_quick.wav-8b053855c4a4888364eed87398b8933a.sample"
+
+[deps]
+
+source_file="res://sounds/Musical Effects/8_bit_negative_quick.wav"
+dest_files=["res://.godot/imported/8_bit_negative_quick.wav-8b053855c4a4888364eed87398b8933a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
