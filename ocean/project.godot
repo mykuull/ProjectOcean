@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="Ocean"
+run/main_scene="uid://bs77ermfybw8x"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://assets/icon.svg"
+
+[autoload]
+
+ChronometerScript="*uid://b14p40me1q7u1"
 
 [display]
 
