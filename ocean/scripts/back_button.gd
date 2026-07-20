@@ -1,4 +1,6 @@
-extends Control
+extends Button
+
+@onready var sfx_back_press: AudioStreamPlayer = $SFXPressBack
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -9,6 +11,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func _on_back_pressed() -> void:
+func _on_pressed() -> void:
 	
-	get_tree().change_scene_to_file("res://scenes/main_menu.tscn") # Scene to go back to
+	sfx_back_press.play() # Play the bubble pop sound :)

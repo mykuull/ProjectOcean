@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://yplbhuwi0u2r"]
+
+[ext_resource type="FontFile" uid="uid://dgyxgol324dj2" path="res://fonts/Excalifont/Excalifont-Regular.ttf" id="1_nxgoe"]
+[ext_resource type="Texture2D" uid="uid://dbua1smrefhjn" path="res://assets/icons/arrow.png" id="2_yowce"]
+[ext_resource type="Script" uid="uid://o8tj12d6g1ft" path="res://scripts/back_button.gd" id="3_u5bdj"]
+[ext_resource type="AudioStream" uid="uid://bysjaehqmvili" path="res://sounds/UI/pop_2.wav" id="4_v7nbw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gjs24"]
+bg_color = Color(0.6, 0.6, 0.6, 0.34901962)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 15.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_am25x"]
+bg_color = Color(0.6, 0.6, 0.6, 0.8)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 15.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_16xqe"]
+bg_color = Color(0.6, 0.6, 0.6, 0.34901962)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 15.0
+expand_margin_bottom = 5.0
+
+[node name="Back" type="Button" unique_id=876558075]
+custom_minimum_size = Vector2(150, 20)
+custom_maximum_size = Vector2(125, 100)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_nxgoe")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_gjs24")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_am25x")
+theme_override_styles/hover = SubResource("StyleBoxFlat_16xqe")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_16xqe")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_16xqe")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_16xqe")
+text = "Back"
+icon = ExtResource("2_yowce")
+alignment = 2
+expand_icon = true
+script = ExtResource("3_u5bdj")
+
+[node name="SFXPressBack" type="AudioStreamPlayer" parent="." unique_id=861710304]
+stream = ExtResource("4_v7nbw")
+max_polyphony = 2
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

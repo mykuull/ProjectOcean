@@ -6,8 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dr63iyy0c7egi" path="res://assets/icons/translation.png" id="4_gis3k"]
 [ext_resource type="Texture2D" uid="uid://bbtym1hv6yk3f" path="res://assets/icons/monitor.png" id="5_83j8s"]
 [ext_resource type="Texture2D" uid="uid://daderti7g4ela" path="res://assets/icons/headphone.png" id="6_gjs24"]
-[ext_resource type="Texture2D" uid="uid://dbua1smrefhjn" path="res://assets/icons/arrow.png" id="8_am25x"]
-[ext_resource type="AudioStream" uid="uid://bysjaehqmvili" path="res://sounds/UI/pop_2.wav" id="8_gjs24"]
+[ext_resource type="PackedScene" uid="uid://yplbhuwi0u2r" path="res://scenes/back_button.tscn" id="7_83j8s"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gis3k"]
 corner_radius_top_left = 15
@@ -27,54 +26,6 @@ metadata/_snap_enabled = true
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_am25x"]
 texture = SubResource("GradientTexture2D_gjs24")
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gjs24"]
-bg_color = Color(0.6, 0.6, 0.6, 0.34901962)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-expand_margin_left = 5.0
-expand_margin_top = 5.0
-expand_margin_right = 15.0
-expand_margin_bottom = 5.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_am25x"]
-bg_color = Color(0.6, 0.6, 0.6, 0.8)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-expand_margin_left = 5.0
-expand_margin_top = 5.0
-expand_margin_right = 15.0
-expand_margin_bottom = 5.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_16xqe"]
-bg_color = Color(0.6, 0.6, 0.6, 0.34901962)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-expand_margin_left = 5.0
-expand_margin_top = 5.0
-expand_margin_right = 15.0
-expand_margin_bottom = 5.0
 
 [node name="Settings" type="Control" unique_id=960803321]
 layout_mode = 3
@@ -136,26 +87,7 @@ layout_mode = 2
 titulo_opcion = "Volume"
 imagen_icono = ExtResource("6_gjs24")
 
-[node name="back" type="Button" parent="VBoxContainer" unique_id=1490027020]
-custom_minimum_size = Vector2(150, 20)
-custom_maximum_size = Vector2(125, 100)
+[node name="Back" parent="VBoxContainer" unique_id=876558075 instance=ExtResource("7_83j8s")]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("1_6wm04")
-theme_override_font_sizes/font_size = 25
-theme_override_styles/normal = SubResource("StyleBoxFlat_gjs24")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_am25x")
-theme_override_styles/hover = SubResource("StyleBoxFlat_16xqe")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_16xqe")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_16xqe")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_16xqe")
-text = "Back"
-icon = ExtResource("8_am25x")
-alignment = 2
-expand_icon = true
 
-[node name="SFXPressBack" type="AudioStreamPlayer" parent="VBoxContainer/back" unique_id=1701291181]
-stream = ExtResource("8_gjs24")
-max_polyphony = 2
-
-[connection signal="pressed" from="VBoxContainer/back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="VBoxContainer/Back" to="." method="_on_back_pressed"]
