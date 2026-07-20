@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bs77ermfybw8x"]
 
-[ext_resource type="Script" uid="uid://6i5ap3mo6jde" path="res://scripts/cronometro.gd" id="1_wy5us"]
-[ext_resource type="FontFile" uid="uid://c1biwi02itidd" path="res://fonts/Excalifont/Excalifont-Regular.woff2" id="2_18wnn"]
-[ext_resource type="PackedScene" uid="uid://ciikavpo8hp8b" path="res://scenes/menu_button.tscn" id="3_drvwg"]
-[ext_resource type="PackedScene" uid="uid://bkr1ylhs8sx8x" path="res://scenes/coin_balance.tscn" id="4_ijkr6"]
+[ext_resource type="Script" uid="uid://6i5ap3mo6jde" path="res://scripts/cronometro.gd" id="1_rhsvv"]
+[ext_resource type="FontFile" uid="uid://c1biwi02itidd" path="res://fonts/Excalifont/Excalifont-Regular.woff2" id="2_3kg1x"]
+[ext_resource type="PackedScene" uid="uid://ciikavpo8hp8b" path="res://scenes/elements/menu_button.tscn" id="3_dyvna"]
+[ext_resource type="PackedScene" uid="uid://bkr1ylhs8sx8x" path="res://scenes/elements/coin_balance.tscn" id="4_x7u1p"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2b7o7"]
 bg_color = Color(0.0378, 0.09467999, 0.18, 0.32941177)
@@ -44,7 +44,7 @@ metallic = 0.4
 [node name="ChronometerTest" type="Node3D" unique_id=581404883]
 
 [node name="Cronometro" type="CanvasLayer" parent="." unique_id=257428278]
-script = ExtResource("1_wy5us")
+script = ExtResource("1_rhsvv")
 
 [node name="MarginContainer" type="MarginContainer" parent="Cronometro" unique_id=1285936375]
 anchors_preset = 8
@@ -78,21 +78,27 @@ layout_mode = 2
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
-theme_override_fonts/font = ExtResource("2_18wnn")
+theme_override_fonts/font = ExtResource("2_3kg1x")
 theme_override_font_sizes/font_size = 150
 
 [node name="TextureRect" type="TextureRect" parent="Cronometro/MarginContainer/VBoxContainer/PanelContainer/HBoxContainer" unique_id=636481621]
 layout_mode = 2
 
-[node name="Button" parent="Cronometro/MarginContainer/VBoxContainer" unique_id=400716776 instance=ExtResource("3_drvwg")]
+[node name="Button" parent="Cronometro/MarginContainer/VBoxContainer" unique_id=400716776 instance=ExtResource("3_dyvna")]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="CoinBalance" parent="." unique_id=1272937770 instance=ExtResource("4_ijkr6")]
-offset_left = 931.0
-offset_top = 28.0
-offset_right = -13.0
-offset_bottom = -575.0
+[node name="CoinBalance" parent="." unique_id=1272937770 instance=ExtResource("4_x7u1p")]
+anchors_preset = -1
+anchor_left = 0.95
+anchor_top = 0.05
+anchor_right = 0.95
+anchor_bottom = 0.05
+offset_left = -185.0
+offset_right = 45.0
+offset_bottom = 45.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="Escenario" type="Node3D" parent="." unique_id=363724955]
 

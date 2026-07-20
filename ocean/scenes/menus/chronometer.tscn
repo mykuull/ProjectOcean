@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://ckpi1eut7hx7r" path="res://assets/deleteme_gumbus_tired.jpg" id="1_v3vl3"]
 [ext_resource type="Script" uid="uid://txtw7bqab4k8" path="res://scripts/chronometer_placeholder.gd" id="1_yxh2v"]
-[ext_resource type="PackedScene" uid="uid://yplbhuwi0u2r" path="res://scenes/back_button.tscn" id="3_76r3w"]
+[ext_resource type="PackedScene" uid="uid://yplbhuwi0u2r" path="res://scenes/elements/back_button.tscn" id="3_76r3w"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g22m5"]
 corner_radius_top_left = 15

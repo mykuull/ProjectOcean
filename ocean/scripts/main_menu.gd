@@ -16,12 +16,12 @@ func _on_quit_pressed() -> void:
 
 
 func _on_settings_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/settings.tscn") # Change scenes to settings
+	get_tree().change_scene_to_file("res://scenes/menus/settings.tscn") # Change scenes to settings
 
 
 func _on_credits_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/credits.tscn") # Change scenes to credits
+	get_tree().change_scene_to_file("res://scenes/menus/credits.tscn") # Change scenes to credits
 
 
 func _on_chronometer_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/chronometer.tscn") # Change scenes to chronometer
+	get_tree().change_scene_to_file("res://scenes/menus/chronometer.tscn") # Change scenes to chronometer

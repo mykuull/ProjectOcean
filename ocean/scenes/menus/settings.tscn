@@ -2,11 +2,11 @@
 
 [ext_resource type="FontFile" uid="uid://dgyxgol324dj2" path="res://fonts/Excalifont/Excalifont-Regular.ttf" id="1_6wm04"]
 [ext_resource type="Script" uid="uid://b7i5bl4euwlw7" path="res://scripts/settings.gd" id="1_gjs24"]
-[ext_resource type="PackedScene" uid="uid://cqax2y7u642ul" path="res://scenes/selector_opciones.tscn" id="2_f4mfi"]
+[ext_resource type="PackedScene" uid="uid://cqax2y7u642ul" path="res://scenes/elements/selector_opciones.tscn" id="2_f4mfi"]
 [ext_resource type="Texture2D" uid="uid://dr63iyy0c7egi" path="res://assets/icons/translation.png" id="4_gis3k"]
 [ext_resource type="Texture2D" uid="uid://bbtym1hv6yk3f" path="res://assets/icons/monitor.png" id="5_83j8s"]
 [ext_resource type="Texture2D" uid="uid://daderti7g4ela" path="res://assets/icons/headphone.png" id="6_gjs24"]
-[ext_resource type="PackedScene" uid="uid://yplbhuwi0u2r" path="res://scenes/back_button.tscn" id="7_83j8s"]
+[ext_resource type="PackedScene" uid="uid://yplbhuwi0u2r" path="res://scenes/elements/back_button.tscn" id="7_83j8s"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gis3k"]
 corner_radius_top_left = 15

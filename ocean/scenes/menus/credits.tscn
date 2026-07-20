@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bx0c6qv1pfcwp" path="res://assets/placeholder_logo.jpg" id="1_0bpdh"]
 [ext_resource type="Script" uid="uid://bi5u6yn1awidj" path="res://scripts/credits.gd" id="1_0ctdu"]
-[ext_resource type="PackedScene" uid="uid://yplbhuwi0u2r" path="res://scenes/back_button.tscn" id="3_2fbfq"]
+[ext_resource type="PackedScene" uid="uid://yplbhuwi0u2r" path="res://scenes/elements/back_button.tscn" id="3_2fbfq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ckv8"]
 corner_radius_top_left = 15
