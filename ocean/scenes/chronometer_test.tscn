@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://6i5ap3mo6jde" path="res://scripts/cronometro.gd" id="1_wy5us"]
 [ext_resource type="FontFile" uid="uid://c1biwi02itidd" path="res://fonts/Excalifont/Excalifont-Regular.woff2" id="2_18wnn"]
 [ext_resource type="PackedScene" uid="uid://ciikavpo8hp8b" path="res://scenes/menu_button.tscn" id="3_drvwg"]
+[ext_resource type="PackedScene" uid="uid://bkr1ylhs8sx8x" path="res://scenes/coin_balance.tscn" id="4_ijkr6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2b7o7"]
 bg_color = Color(0.0378, 0.09467999, 0.18, 0.32941177)
@@ -86,6 +87,12 @@ layout_mode = 2
 [node name="Button" parent="Cronometro/MarginContainer/VBoxContainer" unique_id=400716776 instance=ExtResource("3_drvwg")]
 unique_name_in_owner = true
 layout_mode = 2
+
+[node name="CoinBalance" parent="." unique_id=1272937770 instance=ExtResource("4_ijkr6")]
+offset_left = 931.0
+offset_top = 28.0
+offset_right = -13.0
+offset_bottom = -575.0
 
 [node name="Escenario" type="Node3D" parent="." unique_id=363724955]
 
