@@ -100,6 +100,13 @@ offset_bottom = 45.0
 grow_horizontal = 1
 grow_vertical = 1
 
+[node name="ShopButton" parent="." unique_id=727830718 instance=ExtResource("3_dyvna")]
+offset_left = 60.0
+offset_top = 525.0
+offset_right = 260.0
+offset_bottom = 615.0
+text = "Shop"
+
 [node name="Escenario" type="Node3D" parent="." unique_id=363724955]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Escenario" unique_id=1345422130]
@@ -127,3 +134,5 @@ transform = Transform3D(-1, 1.776357e-15, 8.742278e-08, -2.0225329e-08, 0.972870
 fov = 95.8
 near = 0.001
 far = 27.35
+
+[connection signal="pressed" from="ShopButton" to="Cronometro" method="_on_shop_button_pressed"]
