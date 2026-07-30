@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://bj34xawq0bou2"]
+
+[ext_resource type="Script" uid="uid://kb16rvxfhw4p" path="res://scripts/shop_placeholder.gd" id="1_awhd1"]
+[ext_resource type="PackedScene" uid="uid://yplbhuwi0u2r" path="res://scenes/elements/back_button.tscn" id="2_0tncc"]
+[ext_resource type="PackedScene" uid="uid://c48374ha0linx" path="res://scenes/elements/shop_item_type_button.tscn" id="3_lr2rd"]
+[ext_resource type="PackedScene" uid="uid://bkr1ylhs8sx8x" path="res://scenes/elements/coin_balance.tscn" id="4_p6j4a"]
+[ext_resource type="PackedScene" uid="uid://dten4m1r3nodi" path="res://scenes/elements/item_shop_view.tscn" id="5_0tncc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mm40m"]
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="Gradient" id="Gradient_0nq82"]
+offsets = PackedFloat32Array(0, 0.29104477, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.105882354, 0.32156864, 0.44313726, 1, 0.50980395, 0.78431374, 0.8980392, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ekxnf"]
+gradient = SubResource("Gradient_0nq82")
+fill_from = Vector2(0, 1)
+fill_to = Vector2(0, 0)
+metadata/_snap_enabled = true
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jee4r"]
+texture = SubResource("GradientTexture2D_ekxnf")
+
+[node name="Shop" type="Control" unique_id=509106923]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_awhd1")
+
+[node name="PanelContainer2" type="PanelContainer" parent="." unique_id=740710076]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mm40m")
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer2" unique_id=403395183]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_jee4r")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer2/PanelContainer" unique_id=926829390]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="PanelContainer2/PanelContainer/VBoxContainer" unique_id=2088727991]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer2/PanelContainer/VBoxContainer" unique_id=1555688052]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Control" type="Control" parent="PanelContainer2/PanelContainer/VBoxContainer/HBoxContainer" unique_id=2143394848]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="Back" parent="PanelContainer2/PanelContainer/VBoxContainer/HBoxContainer" unique_id=876558075 instance=ExtResource("2_0tncc")]
+layout_mode = 2
+
+[node name="ShopItemTypeButton" parent="PanelContainer2/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1056204203 instance=ExtResource("3_lr2rd")]
+layout_mode = 2
+
+[node name="ShopItemTypeButton2" parent="PanelContainer2/PanelContainer/VBoxContainer/HBoxContainer" unique_id=61956437 instance=ExtResource("3_lr2rd")]
+layout_mode = 2
+
+[node name="ShopItemTypeButton3" parent="PanelContainer2/PanelContainer/VBoxContainer/HBoxContainer" unique_id=515467044 instance=ExtResource("3_lr2rd")]
+layout_mode = 2
+
+[node name="ShopItemTypeButton4" parent="PanelContainer2/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1678053338 instance=ExtResource("3_lr2rd")]
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="PanelContainer2/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1975512282]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+
+[node name="CoinBalance" parent="PanelContainer2/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1272937770 instance=ExtResource("4_p6j4a")]
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="PanelContainer2/PanelContainer/VBoxContainer" unique_id=647532347]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer2/PanelContainer/VBoxContainer" unique_id=50237658]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Control" type="Control" parent="PanelContainer2/PanelContainer/VBoxContainer/HBoxContainer2" unique_id=1315649845]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer2/PanelContainer/VBoxContainer/HBoxContainer2" unique_id=1207866469]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="ItemShopView" parent="PanelContainer2/PanelContainer/VBoxContainer/HBoxContainer2/VBoxContainer" unique_id=608387914 instance=ExtResource("5_0tncc")]
+layout_mode = 2
+
+[node name="ItemShopView2" parent="PanelContainer2/PanelContainer/VBoxContainer/HBoxContainer2/VBoxContainer" unique_id=1819717256 instance=ExtResource("5_0tncc")]
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="PanelContainer2/PanelContainer/VBoxContainer/HBoxContainer2" unique_id=1511218985]
+layout_mode = 2
+
+[connection signal="pressed" from="PanelContainer2/PanelContainer/VBoxContainer/HBoxContainer/Back" to="." method="_on_back_pressed"]

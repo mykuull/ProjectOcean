@@ -35,4 +35,4 @@ func _actualizar_texto_boton() -> void:
 
 
 func _on_shop_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/menus/shop_placeholder.tscn") # go to shop
+	get_tree().change_scene_to_file("res://scenes/menus/shop.tscn") # go to shop

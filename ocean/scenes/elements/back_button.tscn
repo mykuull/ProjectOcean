@@ -54,14 +54,21 @@ expand_margin_right = 15.0
 expand_margin_bottom = 5.0
 
 [node name="Back" type="Button" unique_id=876558075]
-custom_minimum_size = Vector2(150, 20)
-custom_maximum_size = Vector2(125, 100)
+custom_minimum_size = Vector2(150, 30)
+custom_maximum_size = Vector2(200, 55)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -952.0
+offset_bottom = -593.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_nxgoe")
 theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_gjs24")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_am25x")
-theme_override_styles/hover = SubResource("StyleBoxFlat_16xqe")
+theme_override_styles/hover = SubResource("StyleBoxFlat_am25x")
 theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_16xqe")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_16xqe")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_16xqe")
