@@ -1,0 +1,136 @@
+[gd_scene format=3 uid="uid://c48374ha0linx"]
+
+[ext_resource type="FontFile" uid="uid://dgyxgol324dj2" path="res://fonts/Excalifont/Excalifont-Regular.ttf" id="1_2pmfg"]
+[ext_resource type="Texture2D" uid="uid://bn84p2e61umvj" path="res://assets/icons/placeholder.png" id="2_c0jdx"]
+[ext_resource type="Script" uid="uid://o8tj12d6g1ft" path="res://scripts/back_button.gd" id="3_2n1vp"]
+[ext_resource type="AudioStream" uid="uid://bysjaehqmvili" path="res://sounds/UI/pop_2.wav" id="3_c0jdx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2n1vp"]
+bg_color = Color(0.6, 0.6, 0.6, 0.34901962)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
+corner_detail = 12
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 15.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dw4px"]
+bg_color = Color(0.6, 0.6, 0.6, 0.8)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
+corner_detail = 12
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 15.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c4t0w"]
+bg_color = Color(0.6, 0.6, 0.6, 0.8)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
+corner_detail = 12
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 15.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2g38p"]
+bg_color = Color(0.6, 0.6, 0.6, 0.8)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
+corner_detail = 12
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 15.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7wor3"]
+bg_color = Color(0.6, 0.6, 0.6, 0.8)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
+corner_detail = 12
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 15.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_koi0s"]
+bg_color = Color(0.6, 0.6, 0.6, 0.8)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
+corner_detail = 12
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 15.0
+expand_margin_bottom = 5.0
+
+[node name="ShopItemTypeButton" type="Button" unique_id=1056204203]
+custom_minimum_size = Vector2(65, 65)
+custom_maximum_size = Vector2(120, 120)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1087.0
+offset_bottom = -583.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_2pmfg")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2n1vp")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dw4px")
+theme_override_styles/hover = SubResource("StyleBoxFlat_c4t0w")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_2g38p")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_7wor3")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_koi0s")
+icon = ExtResource("2_c0jdx")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("3_2n1vp")
+
+[node name="SFXPressBack" type="AudioStreamPlayer" parent="." unique_id=582571406]
+stream = ExtResource("3_c0jdx")
+max_polyphony = 2
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

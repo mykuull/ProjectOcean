@@ -72,12 +72,18 @@ size_flags_vertical = 3
 texture = ExtResource("1_v3vl3")
 expand_mode = 1
 stretch_mode = 5
+flip_h = true
 
 [node name="Back" parent="." unique_id=876558075 instance=ExtResource("3_76r3w")]
 layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 74.0
 offset_top = 556.0
 offset_right = 199.0
 offset_bottom = 595.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

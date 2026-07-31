@@ -1,0 +1,135 @@
+[gd_scene format=3 uid="uid://dten4m1r3nodi"]
+
+[ext_resource type="Texture2D" uid="uid://cvp15urx176pp" path="res://assets/icons/landscape.png" id="1_qleq1"]
+[ext_resource type="Script" uid="uid://o8tj12d6g1ft" path="res://scripts/back_button.gd" id="2_4b7xv"]
+[ext_resource type="AudioStream" uid="uid://bh3jfcpqoien8" path="res://sounds/Items/coins_gather_quick.wav" id="3_4b7xv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_earvc"]
+bg_color = Color(0.51171213, 0.8711748, 0.9999997, 0.5137255)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.31321016, 0.52206707, 1, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 15.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4b7xv"]
+bg_color = Color(0.17729056, 0.8156584, 0.9999998, 0.5137255)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.31321016, 0.52206707, 1, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 15.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yocxe"]
+bg_color = Color(0.51171213, 0.8711748, 0.9999997, 0.5137255)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.31321016, 0.52206707, 1, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 15.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b1dtn"]
+bg_color = Color(0.51171213, 0.8711748, 0.9999997, 0.5137255)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.31321016, 0.52206707, 1, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 15.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eq8lx"]
+bg_color = Color(0.51171213, 0.8711748, 0.9999997, 0.5137255)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.31321016, 0.52206707, 1, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 15.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xc8r2"]
+bg_color = Color(0.51171213, 0.8711748, 0.9999997, 0.5137255)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.31321016, 0.52206707, 1, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 15.0
+expand_margin_bottom = 5.0
+
+[node name="ItemShopView" type="Button" unique_id=608387914]
+custom_minimum_size = Vector2(430, 150)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -722.0
+offset_bottom = -498.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 38
+theme_override_styles/normal = SubResource("StyleBoxFlat_earvc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4b7xv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_yocxe")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_b1dtn")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_eq8lx")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_xc8r2")
+text = "item name"
+icon = ExtResource("1_qleq1")
+icon_alignment = 2
+expand_icon = true
+script = ExtResource("2_4b7xv")
+
+[node name="SFXPressBack" type="AudioStreamPlayer" parent="." unique_id=848306788]
+stream = ExtResource("3_4b7xv")
+max_polyphony = 2
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
