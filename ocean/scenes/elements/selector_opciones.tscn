@@ -11,7 +11,8 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 bg_color = Color(0.6, 0.6, 0.6, 0.14117648)
 
 [node name="SelectorOpciones" type="HBoxContainer" unique_id=1092027332]
-custom_minimum_size = Vector2(45, 45)
+custom_minimum_size = Vector2(300, 45)
+custom_maximum_size = Vector2(400, -1)
 script = ExtResource("1_320a1")
 
 [node name="icon" type="TextureRect" parent="." unique_id=243352324]
@@ -51,10 +52,13 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_16xqe")
 text = "<"
 
 [node name="selecc" type="Label" parent="." unique_id=795068809]
+custom_minimum_size = Vector2(100, 0)
+custom_maximum_size = Vector2(100, -1)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_na5ot")
 theme_override_font_sizes/font_size = 25
 text = "Value"
+horizontal_alignment = 1
 
 [node name="button_right" type="Button" parent="." unique_id=963496501]
 custom_minimum_size = Vector2(20, 20)
