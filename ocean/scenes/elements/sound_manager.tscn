@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://bjiipsu6d1vv5"]
+
+[ext_resource type="Script" uid="uid://dt632vf73turh" path="res://scripts/sound_manager.gd" id="1_tcgla"]
+[ext_resource type="AudioStream" uid="uid://bcub3ye8p5dfw" path="res://sounds/UI/water_drop_synthetic.wav" id="2_d3aar"]
+[ext_resource type="AudioStream" uid="uid://fjhb2qjliflp" path="res://sounds/UI/pop_1.wav" id="3_ogmxe"]
+[ext_resource type="AudioStream" uid="uid://bysjaehqmvili" path="res://sounds/UI/pop_2.wav" id="4_t2god"]
+[ext_resource type="AudioStream" uid="uid://bh3jfcpqoien8" path="res://sounds/Items/coins_gather_quick.wav" id="5_d3aar"]
+
+[node name="SoundManager" type="Control" unique_id=348115837]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tcgla")
+
+[node name="SFXHoverUnhover" type="AudioStreamPlayer" parent="." unique_id=577436604]
+unique_name_in_owner = true
+stream = ExtResource("2_d3aar")
+volume_db = -10.0
+max_polyphony = 2
+
+[node name="SFXPress1" type="AudioStreamPlayer" parent="." unique_id=1399153213]
+unique_name_in_owner = true
+stream = ExtResource("3_ogmxe")
+max_polyphony = 2
+
+[node name="SFXPress2" type="AudioStreamPlayer" parent="." unique_id=490766650]
+unique_name_in_owner = true
+stream = ExtResource("4_t2god")
+max_polyphony = 2
+
+[node name="SFXBuy" type="AudioStreamPlayer" parent="." unique_id=1190846498]
+unique_name_in_owner = true
+stream = ExtResource("5_d3aar")
+max_polyphony = 2

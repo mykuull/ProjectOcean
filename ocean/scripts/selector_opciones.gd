@@ -10,8 +10,6 @@ var indice_actual = 0
 @onready var etiqueta_titulo= $option
 @onready var etiqueta_valor = $selecc
 @onready var textura_icono = $icon
-@onready var sfx_press_left: AudioStreamPlayer = $button_left/SFXPressLeft
-@onready var sfx_press_right: AudioStreamPlayer = $button_right/SFXPressRight
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -27,7 +25,7 @@ func _process(delta: float) -> void:
 	
 func _on_button_left_pressed() -> void:
 	
-	sfx_press_left.play()
+	SoundManager._play_hover_sound()
 	
 	if lista_opciones.size()==0: return
 	
@@ -42,7 +40,7 @@ func _on_button_left_pressed() -> void:
 	
 func _on_button_right_pressed()->void:
 	
-	sfx_press_right.play()
+	SoundManager._play_hover_sound()
 	
 	if lista_opciones.size()==0: return 
 	

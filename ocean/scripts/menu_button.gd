@@ -1,8 +1,5 @@
 extends Button
 
-@onready var sfx_hover_unhover: AudioStreamPlayer = $SFXHoverUnhover
-@onready var sfx_press: AudioStreamPlayer = $SFXPress
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
@@ -12,7 +9,7 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_pressed() -> void:
-	sfx_press.play()
+	SoundManager._play_pressed1_sound()
 
 func _on_mouse_entered() -> void:
-	sfx_hover_unhover.play()
+	SoundManager._play_hover_sound()
