@@ -13,4 +13,4 @@ func _process(delta: float) -> void:
 
 func _on_pressed() -> void:
 	
-	sfx_back_press.play() # Play the bubble pop sound :)
+	SoundManager._play_pressed2_sound()

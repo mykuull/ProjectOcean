@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://dten4m1r3nodi"]
 
 [ext_resource type="Texture2D" uid="uid://cvp15urx176pp" path="res://assets/icons/landscape.png" id="1_qleq1"]
-[ext_resource type="Script" uid="uid://o8tj12d6g1ft" path="res://scripts/back_button.gd" id="2_4b7xv"]
-[ext_resource type="AudioStream" uid="uid://bh3jfcpqoien8" path="res://sounds/Items/coins_gather_quick.wav" id="3_4b7xv"]
+[ext_resource type="Script" uid="uid://c27vmcpgtqkqe" path="res://scripts/item_shop_view.gd" id="2_4b7xv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_earvc"]
 bg_color = Color(0.51171213, 0.8711748, 0.9999997, 0.5137255)
@@ -127,9 +126,5 @@ icon = ExtResource("1_qleq1")
 icon_alignment = 2
 expand_icon = true
 script = ExtResource("2_4b7xv")
-
-[node name="SFXPressBack" type="AudioStreamPlayer" parent="." unique_id=848306788]
-stream = ExtResource("3_4b7xv")
-max_polyphony = 2
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]
