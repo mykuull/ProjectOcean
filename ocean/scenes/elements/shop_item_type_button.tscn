@@ -3,7 +3,6 @@
 [ext_resource type="FontFile" uid="uid://dgyxgol324dj2" path="res://fonts/Excalifont/Excalifont-Regular.ttf" id="1_2pmfg"]
 [ext_resource type="Texture2D" uid="uid://bn84p2e61umvj" path="res://assets/icons/placeholder.png" id="2_c0jdx"]
 [ext_resource type="Script" uid="uid://o8tj12d6g1ft" path="res://scripts/back_button.gd" id="3_2n1vp"]
-[ext_resource type="AudioStream" uid="uid://bysjaehqmvili" path="res://sounds/UI/pop_2.wav" id="3_c0jdx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2n1vp"]
 bg_color = Color(0.6, 0.6, 0.6, 0.34901962)
@@ -128,9 +127,5 @@ icon = ExtResource("2_c0jdx")
 icon_alignment = 1
 expand_icon = true
 script = ExtResource("3_2n1vp")
-
-[node name="SFXPressBack" type="AudioStreamPlayer" parent="." unique_id=582571406]
-stream = ExtResource("3_c0jdx")
-max_polyphony = 2
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]
