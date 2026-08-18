@@ -34,6 +34,7 @@ func _load():
 		var save_data = data.duplicate()
 		contents.balance = save_data.balance
 		contents.volume = save_data.volume
+		SoundManager.set_volume(contents.volume)
 
 # MANIPULATING DATA
 

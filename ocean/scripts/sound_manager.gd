@@ -33,7 +33,6 @@ func _play_hover_sound() -> void:
 func _play_buy_sound() -> void:
 	sfx_button_buy.play() # Buy
 
-
 func set_volume(volume: int) -> void:
 	if volume <= 0:
 		AudioServer.set_bus_mute(master_bus_index, true)
