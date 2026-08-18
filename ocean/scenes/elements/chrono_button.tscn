@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bti3icbjfv7i1"]
+
+[ext_resource type="Script" uid="uid://4wmpcsxsu7st" path="res://scripts/chrono_button.gd" id="1_8fte8"]
+
+[node name="ChronoButton" type="Control" unique_id=1456200902]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8fte8")
+
+[node name="StartStop" type="Control" parent="." unique_id=2139626719]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TempMode" type="Control" parent="." unique_id=848791758]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ChronoMode" type="Control" parent="." unique_id=172518298]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
