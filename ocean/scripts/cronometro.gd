@@ -36,3 +36,11 @@ func _actualizar_texto_boton() -> void:
 
 func _on_shop_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/menus/shop.tscn") # go to shop
+
+
+func _on_debug_button_1_pressed() -> void: # DEBUG
+	SaveLoad.add_balance(5.0)
+
+
+func _on_debug_button_2_pressed() -> void: # DEBUG
+	SaveLoad.set_balance(0.0)

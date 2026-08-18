@@ -111,6 +111,24 @@ offset_right = 260.0
 offset_bottom = 615.0
 text = "Shop"
 
+[node name="DebugButton1" parent="." unique_id=1820616294 instance=ExtResource("3_4hpkr")]
+modulate = Color(1, 0.70980394, 0, 1)
+offset_left = 850.0
+offset_top = 91.0
+offset_right = 1102.0
+offset_bottom = 181.0
+theme_override_font_sizes/font_size = 30
+text = "DEBUG: Add 5"
+
+[node name="DebugButton2" parent="." unique_id=1021932059 instance=ExtResource("3_4hpkr")]
+modulate = Color(1, 0.70980394, 0, 1)
+offset_left = 849.0
+offset_top = 195.0
+offset_right = 1101.0
+offset_bottom = 285.0
+theme_override_font_sizes/font_size = 30
+text = "DEBUG: Set 0"
+
 [node name="Escenario" type="Node3D" parent="." unique_id=363724955]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Escenario" unique_id=1345422130]
@@ -140,3 +158,5 @@ near = 0.001
 far = 27.35
 
 [connection signal="pressed" from="ShopButton" to="Cronometro" method="_on_shop_button_pressed"]
+[connection signal="pressed" from="DebugButton1" to="Cronometro" method="_on_debug_button_1_pressed"]
+[connection signal="pressed" from="DebugButton2" to="Cronometro" method="_on_debug_button_2_pressed"]

@@ -19,6 +19,7 @@ config/icon="res://assets/icon.svg"
 
 ChronometerScript="*uid://b14p40me1q7u1"
 SoundManager="*uid://bjiipsu6d1vv5"
+SaveLoad="*uid://b54eo0fwhjq7n"
 
 [display]
 
