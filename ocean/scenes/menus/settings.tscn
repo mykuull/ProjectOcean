@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cqax2y7u642ul" path="res://scenes/elements/selector_opciones.tscn" id="2_f4mfi"]
 [ext_resource type="Texture2D" uid="uid://dr63iyy0c7egi" path="res://assets/icons/translation.png" id="4_gis3k"]
 [ext_resource type="Texture2D" uid="uid://bbtym1hv6yk3f" path="res://assets/icons/monitor.png" id="5_83j8s"]
-[ext_resource type="Texture2D" uid="uid://daderti7g4ela" path="res://assets/icons/headphone.png" id="6_gjs24"]
+[ext_resource type="Texture2D" uid="uid://cyl4rm62bs214" path="res://assets/icons/speaker.png" id="6_v4co7"]
 [ext_resource type="PackedScene" uid="uid://yplbhuwi0u2r" path="res://scenes/elements/back_button.tscn" id="7_83j8s"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gis3k"]
@@ -91,13 +91,16 @@ titulo_opcion = "Display"
 imagen_icono = ExtResource("5_83j8s")
 
 [node name="Volume" parent="HBoxContainer/VBoxContainer" unique_id=1304348315 instance=ExtResource("2_f4mfi")]
+unique_name_in_owner = true
 layout_mode = 2
 titulo_opcion = "Volume"
-imagen_icono = ExtResource("6_gjs24")
+imagen_icono = ExtResource("6_v4co7")
+modo_numerico = true
 
 [node name="Back" parent="HBoxContainer/VBoxContainer" unique_id=876558075 instance=ExtResource("7_83j8s")]
 custom_minimum_size = Vector2(125, 30)
 custom_maximum_size = Vector2(150, 55)
 layout_mode = 2
 
+[connection signal="numeric_value_changed" from="HBoxContainer/VBoxContainer/Volume" to="." method="_on_volume_numeric_value_changed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
