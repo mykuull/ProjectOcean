@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bti3icbjfv7i1"]
 
 [ext_resource type="Script" uid="uid://4wmpcsxsu7st" path="res://scripts/chrono_button.gd" id="1_8fte8"]
+[ext_resource type="FontFile" uid="uid://dgyxgol324dj2" path="res://fonts/Excalifont/Excalifont-Regular.ttf" id="2_84i7o"]
 
 [node name="ChronoButton" type="Control" unique_id=1456200902]
 layout_mode = 3
@@ -11,17 +12,37 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8fte8")
 
-[node name="StartStop" type="Control" parent="." unique_id=2139626719]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="StartStop" type="Button" parent="." unique_id=1936620903]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "START"
 
-[node name="TempMode" type="Control" parent="." unique_id=848791758]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="TempMode" type="Button" parent="." unique_id=1174649653]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "TEMP"
 
-[node name="ChronoMode" type="Control" parent="." unique_id=172518298]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="ChronoMode" type="Button" parent="." unique_id=1963597335]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "CHRONO"
+
+[node name="RewardLabel" type="RichTextLabel" parent="." unique_id=2080155387]
+layout_mode = 0
+offset_right = 90.0
+offset_bottom = 24.0
+theme_override_colors/default_color = Color(0.28627452, 0.7764706, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_84i7o")
+theme_override_font_sizes/normal_font_size = 12
+theme_override_font_sizes/bold_font_size = 12
+theme_override_font_sizes/bold_italics_font_size = 12
+theme_override_font_sizes/italics_font_size = 12
+theme_override_font_sizes/mono_font_size = 12
+bbcode_enabled = true
+text = "XX coins/min"
+scroll_active = false
+autowrap_mode = 2
